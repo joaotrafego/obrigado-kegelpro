@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obrigado pela sua compra — Kegel Pro</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1458467148993251');
+    fbq('track', 'PageView');
+    fbq('track', 'Purchase', {currency: 'BRL', value: 0.00});
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1458467148993251&ev=Purchase&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0e0e0e;
+      --surface: #161616;
+      --border: rgba(255,255,255,0.08);
+      --gold: #c9a96e;
+      --gold-light: #e5c99a;
+      --text: #f0ece4;
+      --muted: rgba(240,236,228,0.5);
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(201,169,110,0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      bottom: -10%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(201,169,110,0.06) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3.5rem 3rem;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(32px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      border-radius: 1px;
+    }
+
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .logo-wrap img {
+      height: 56px;
+      width: auto;
+      filter: brightness(1.4) contrast(0.85);
+    }
+
+    .check-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,169,110,0.3);
+      background: rgba(201,169,110,0.08);
+      margin-bottom: 1.75rem;
+      animation: fadeUp 0.8s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .check-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+      animation: fadeUp 0.8s 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 5vw, 2.6rem);
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      animation: fadeUp 0.8s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 1.25rem;
+      animation: fadeUp 0.8s 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+      animation: fadeUp 0.8s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    p strong {
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .email-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: rgba(201,169,110,0.07);
+      border: 1px solid rgba(201,169,110,0.15);
+      border-radius: 8px;
+      padding: 0.5rem 0.9rem;
+      margin: 0.75rem 0 2rem;
+      animation: fadeUp 0.8s 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .email-note svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.8;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: var(--gold);
+      color: #0e0e0e;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background 0.25s, transform 0.2s;
+      animation: fadeUp 0.8s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .footer-note {
+      margin-top: 1.75rem;
+      font-size: 0.72rem;
+      color: rgba(240,236,228,0.25);
+      letter-spacing: 0.04em;
+      animation: fadeUp 0.8s 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- Logo -->
+    <div class="logo-wrap">
+      <img src="data:image/jpeg;base64,/9j/4QJoRXhpZgAASUkqAAgAAAADAA4BAgD4AAAAMgAAADsBAgAlAAAAKgEAAGmHBAABAAAATwEAAAAAAABTaWduYXR1cmU6IDNBak96MUtvY0lLdisrZ293WlZSazhIR0RvTUcxNXpzeDltWmFoSGw4OExlbFlIdHJVRG9vTy9FTlBqZmVNTitrekY4RXo5bDhzeGJHYkZlT2gvSzdlUElPdjVibHBrZWxrYTMxSS9LdWNLN1hzMXFkY2NSOC9WcmZlUjRIWWJ3VWxRVG5TSFpYc3NUaGp6NXNaenJRYUNST1F5cTBNaWNSV3J1WG5xdVVVQWxHQXB5WDF4WThMSU1vSlRzc1RUNHFlYk84RGY2UzU1UGMrUWlsdVNxVjhyR052RzJTck1GS1psdlZTTWdoZ289ADc3YzdiYzI2LTkxZTMtNDNmNS04NDBmLTdjYjhiYjVlMDIxYQABAIaSBwD/AAAAYQEAAAAAAABBU0NJSQAAAFNpZ25hdHVyZTogM0FqT3oxS29jSUt2Kytnb3daVlJrOEhHRG9NRzE1enN4OW1aYWhIbDg4TGVsWUh0clVEb29PL0VOUGpmZU1OK2t6RjhFejlsOHN4YkdiRmVPaC9LN2VQSU92NWJscGtlbGthMzFJL0t1Y0s3WHMxcWRjY1I4L1ZyZmVSNEhZYndVbFFUblNIWlhzc1Roano1c1p6clFhQ1JPUXlxME1pY1JXcnVYbnF1VVVBbEdBcHlYMXhZOExJTW9KVHNzVFQ0cWViTzhEZjZTNTVQYytRaWx1U3FWOHJHTnZHMlNyTUZLWmx2VlNNZ2hnbz3/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCAPAA8ADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0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" alt="Kegel Pro" />
+    </div>
+
+    <!-- Check icon -->
+    <div class="check-icon">
+      <svg viewBox="0 0 24 24">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <!-- Label -->
+    <p class="label">Compra confirmada</p>
+
+    <!-- Heading -->
+    <h1>Obrigado pela<br><em>sua compra!</em></h1>
+
+    <div class="divider"></div>
+
+    <!-- Body text -->
+    <p>Seu acesso ao <strong>Kegel Pro</strong> já está liberado e pronto para você começar sua jornada.</p>
+
+    <!-- Email note -->
+    <span class="email-note">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      Os detalhes também foram enviados ao seu e-mail cadastrado
+    </span>
+
+    <!-- CTA Button -->
+    <a href="https://aluno.cakto.com.br/app" class="btn" target="_blank" rel="noopener">
+      Acesse seu produto
+    </a>
+
+    <p class="footer-note">Kegel Pro &nbsp;·&nbsp; Área de Membros</p>
+
+  </div>
+
+</body>
+</html>

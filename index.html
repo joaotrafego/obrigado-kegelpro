@@ -24,6 +24,17 @@
       src="https://www.facebook.com/tr?id=1042367447117633&ev=Purchase&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
+<!-- Conversions API -->
+<script>
+(function(){
+  var pixelId='1042367447117633';
+  var accessToken='EAAyufI7enZBEBRXjiZBZAYmSR4gTVRvaPof5natQZBOMWYf1QWpiGxqAx0v8cUIcPKR22CKhrL9qZBZCJqMKzP78JOHJcD787yMaKpVWggZAaZBZBip6AlGfQIz1GOJiYmRZAV8CifvEfi9ZAnjqm6bCg7hFbA622m185w8wDbpA0uuX10wBs65wYsG4yqEczaB3wZDZD';
+  var t=Math.floor(Date.now()/1000);
+  var id='purch_'+t+'_'+Math.random().toString(36).substr(2,9);
+  fetch('https://graph.facebook.com/v19.0/'+pixelId+'/events?access_token='+accessToken,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({data:[{event_name:'Purchase',event_time:t,event_id:id,action_source:'website',event_source_url:window.location.href,user_data:{client_user_agent:navigator.userAgent},custom_data:{currency:'BRL',value:29.90}}]})}).catch(function(){});
+})();
+</script>
+<!-- End Conversions API -->
 
   <!-- Utmify Pixel -->
   <script>
